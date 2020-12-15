@@ -14,7 +14,7 @@ In your browser, navigate to "http://localhost:8983/solr/" to confirm Solr is up
 # Index Gutemberg Project Books
 
 1. Verify you can open books.json - this dataset has been extracted from the Gutemberg Project by [corgis](https://think.cs.vt.edu/corgis/json/index.html)
-2. Install [Python 3.6](https://www.python.org/downloads/) and the [pysolr library](https://github.com/django-haystack/pysolr) library
+2. Install [Python 3.6](https://www.python.org/downloads/) and the [pysolr library](https://github.com/django-haystack/pysolr) library - pip install pysolr
 3. Run `python index.py` to index the books
 
 # Confirm Solr has around 1000 books
