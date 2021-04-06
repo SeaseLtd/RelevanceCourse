@@ -20,4 +20,6 @@ def books():
 
 if __name__ == "__main__":
     solr = pysolr.Solr('http://localhost:8983/solr/books', timeout=100)
-    solr.add(books())
+    jsonBooks = list(books())
+    solr.add(jsonBooks)
+    solr.commit()
