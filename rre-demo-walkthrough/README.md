@@ -10,10 +10,19 @@ UI for Evaluation Results
 java -jar rre-server-1.1.jar
 
 Data Dirs for the tmp Solr instances
+
 mkdir /tmp/data1
+
 mkdir /tmp/data2
+
 mkdir /tmp/data3
+
 mkdir /tmp/data4
+
+Download Corpus
+https://querqy.org/datasets/icecat/icecat-products-150k-20200809.tar.gz
+rename to: ecommerce.json
+move it to: .../RelevanceCourse/rre-demo-walkthrough/src/etc/corpora
 
 Evaluate
 mvn rre:evaluate
