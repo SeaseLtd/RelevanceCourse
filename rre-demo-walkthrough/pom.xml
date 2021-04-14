@@ -1,0 +1,110 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>io.sease.examples</groupId>
+    <artifactId>rre-demo</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>archetype</id>
+            <name>Sease repository</name>
+            <url>https://raw.github.com/SeaseLtd/rated-ranking-evaluator/mvn-repo</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.sease</groupId>
+                <artifactId>rre-maven-solr-plugin</artifactId>
+                <version>8.3.0</version>
+                <!--
+                    the configuration below is provided just for example,
+                    as it perfectly matches default values
+                -->
+                <configuration>
+                    <configurations-folder>src/etc/configuration_sets</configurations-folder>
+                    <corpora-folder>src/etc/corpora</corpora-folder>
+                    <corpora-file>ecommerce.json</corpora-file>
+                    <ratings-folder>src/etc/ratings</ratings-folder>
+                    <templates-folder>src/etc/templates</templates-folder>
+                    <fields>id,title,score</fields>
+                    <include>
+                        <param>RRE-WSP-1</param>
+                        <param>RRE-WSP-2</param>
+                        <param>RRE-WSP-3</param>
+                        <param>RRE-WSP-4</param>
+                    </include>
+                    <!--
+                        Metrics that don't require any parameter.
+                    -->
+                    <metrics>
+                        <param>io.sease.rre.core.domain.metrics.impl.NDCGAtTen</param>
+                        <param>io.sease.rre.core.domain.metrics.impl.PrecisionAtTen</param>
+                    </metrics>
+
+                    <!--
+                        Metrics that can be parameterized.
+                        https://github.com/SeaseLtd/rated-ranking-evaluator/wiki/Maven%20Plugin#parameterized-metrics
+                    -->
+                    <parameterizedMetrics>
+
+<!--                        <ndcgAt4>-->
+<!--                            <class>io.sease.rre.core.domain.metrics.impl.NDCGAtK</class>-->
+<!--                            <k>4</k>-->
+<!--                            &lt;!&ndash; optional - max/default grades &ndash;&gt;-->
+<!--                            <maximumGrade>4</maximumGrade>-->
+<!--                            <missingGrade>2</missingGrade>-->
+<!--                            &lt;!&ndash; optional - name &ndash;&gt;-->
+<!--                            <name>NDCG@4</name>-->
+<!--                        </ndcgAt4>-->
+                       <expectedReciprocalRank>
+                           <class>io.sease.rre.core.domain.metrics.impl.ExpectedReciprocalRank</class>-->
+                           <k>10</k>
+                           <maximumGrade>4</maximumGrade>
+                           <missingGrade>2.5</missingGrade>
+                           <name>ERR@10_missing2.5</name>
+                         </expectedReciprocalRank>
+<!--                        <recallAtK>-->
+<!--                            <class>io.sease.rre.core.domain.metrics.impl.RecallAtK</class>-->
+<!--                            <k>10</k>-->
+<!--                        </recallAtK>-->
+                    </parameterizedMetrics>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>search-quality-evaluation</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>evaluate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>io.sease</groupId>
+                <artifactId>rre-maven-report-plugin</artifactId>
+                <version>1.1</version>
+                <configuration>
+                    <formats>
+                        <param>rre-server</param>
+                    </formats>
+                    <endpoint>http://127.0.0.1:8080/</endpoint>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>search-quality-evaluation-reporting</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
