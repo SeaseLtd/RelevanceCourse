@@ -99,6 +99,7 @@
        Point fields don't support FieldCache, so they must have docValues="true" if needed for sorting, faceting, functions, etc.
      -->
      <fieldType name="pint" class="solr.IntPointField" docValues="true"/>
+     <fieldType name="plong" class="solr.LongPointField" docValues="true"/>
 
      <!-- A general text field that has reasonable, generic
           cross-language defaults: it tokenizes with StandardTokenizer,
