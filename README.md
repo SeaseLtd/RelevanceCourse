@@ -20,3 +20,8 @@ In your browser, navigate to "http://localhost:8983/solr/" to confirm Solr is up
 # Confirm Solr has 1006 books
 
 Navigate [here](http://localhost:8983/solr/books/select?q=*:*) and confirm you get the results.
+
+# Stop Solr
+```
+./bin/solr stop
+```
