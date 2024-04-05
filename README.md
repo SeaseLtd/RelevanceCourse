@@ -6,7 +6,7 @@ Solr Index for the [Gutenberg Project](https://www.gutenberg.org).
 2. Run Solr pointing at the Solr Home directory for the Relevance Course
 
 ```
-./bin/solr start -f -s /path/to/relevanceCourse/
+./bin/solr start -s /path/to/relevanceCourse/
 ```
 
 In your browser, navigate to "http://localhost:8983/solr/" to confirm Solr is up and running
