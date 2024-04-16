@@ -906,6 +906,7 @@
       <str name="weightField">downloads</str>
       <str name="suggestAnalyzerFieldType">text_general</str>
       <str name="buildOnStartup">false</str>
+      <str name="storeDir">${solr.data.dir:}/suggester</str>
     </lst>
   </searchComponent>
 
