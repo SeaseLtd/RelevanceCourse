@@ -1,0 +1,153 @@
+<!DOCTYPE NETSCAPE-Bookmark-file-1>
+<!-- This is an automatically generated file.
+     It will be read and overwritten.
+     DO NOT EDIT! -->
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+<TITLE>Bookmarks</TITLE>
+<H1>Bookmarks</H1>
+<DL><p>
+    <DT><H3 ADD_DATE="1713768495" LAST_MODIFIED="0" PERSONAL_TOOLBAR_FOLDER="true">Bookmarks Bar</H3>
+    <DL><p>
+        <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Solr Beginner Training</H3>
+        <DL><p>
+            <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Query Parsers</H3>
+            <DL><p>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Standard</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:(Pride%20and%20Prejudice)" ADD_DATE="1713768539">1 - general</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:%22Pride%20and%20Prejudice%22" ADD_DATE="1713768539">2 - phrase</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:p?ide" ADD_DATE="1713768539">3 - wildcards</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:pr*" ADD_DATE="1713768539">4 - wildcards</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:prade~1" ADD_DATE="1713768539">5 - fuzzy</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:%22serious%20importance%22~9" ADD_DATE="1713768539">7 - proximity</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=subjects:*" ADD_DATE="1713768539">8 - existence</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=downloads:[*%20TO%2020]" ADD_DATE="1713768539">9 - range</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:[A%20TO%20C]&fl=author_s&sort=author_s%20asc&rows=1000" ADD_DATE="1713768539">10 - range C</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=author:austen%20title:pride%20subjects:%22Epistolary%20fiction%22^3&debug=true" ADD_DATE="1713768539">11 - boost</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:%22Pride%20and%20Prejudice%22^=5.0&debug=true" ADD_DATE="1713768539">12 - constant score</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:(pride%20prejudice)" ADD_DATE="1713768539">13 - boolean</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=title:(pride%20AND%20prejudice)" ADD_DATE="1713768539">14 - boolean</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=lucene&q=-subjects:*" ADD_DATE="1713768539">15 - pure negative</A>
+                </DL><p>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">DisMax</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=dismax&q=adventure&qf=subjects" ADD_DATE="1713768539">1 - query fields qf</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=dismax&q=adventure&qf=subjects^1.5%20title" ADD_DATE="1713768539">2 - boost qf</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=dismax&q=dracula&qf=title%20subjects&debug=true&tie=0&fl=subjects,title" ADD_DATE="1713768539">3 - tie 0</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=dismax&q=dracula&qf=title%20subjects&debug=true&tie=1&fl=subjects,title" ADD_DATE="1713768539">4 - tie 1</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=dismax&q=dracula&qf=title%20subjects&debug=true&tie=0.1&fl=subjects,title" ADD_DATE="1713768539">5 - tie 0.1</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=adventure%20&qf=subjects%20title&defType=dismax&bq=author_s:%22Verne,%20Jules%22&debug=true" ADD_DATE="1713768539">6 - boost query bq</A>
+                </DL><p>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">eDisMax</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=edismax&q=title:(pride%20prejudice)&mm=2" ADD_DATE="1713768539">1 - minimum should match mm</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=edismax&q=title:(pride%20prejudice)&boost=div(1,downloads)&debug=true" ADD_DATE="1713768539">2 - boost</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=edismax&q=adventure%20AND%20author:Verne&qf=title%20subjects&debug=true" ADD_DATE="1713768539">3 - mixed search</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=edismax&q=adventure%20sport%20OR%20author:V?rne%20&qf=title%20subjects&debug=true" ADD_DATE="1713768539">4 - wildcard</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?defType=edismax&q=adventure%20-author_s:%22Doyle,%20Arthur%20Conan%22&qf=title%20subjects&debug=true" ADD_DATE="1713768539">5 - negative clause</A>
+                </DL><p>
+            </DL><p>
+            <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Spell Checking</H3>
+            <DL><p>
+                <DT><A HREF="http://localhost:8983/solr/books/spell?spellcheck=true&spellcheck.q=adventire&spellcheck.build=true&spellcheck.dictionary=default" ADD_DATE="1713768539">1 - spell check</A>
+            </DL><p>
+            <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Group, Collapse &amp; Expand</H3>
+            <DL><p>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Group</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&group=true&group.field=author_s" ADD_DATE="1713768539">1 - group.field</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&group=true&group.field=author_s&group.limit=5" ADD_DATE="1713768539">2 - group.limit</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&group=true&group.field=author_s&group.limit=5&sort=author_s%20asc" ADD_DATE="1713768539">3 - sort</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&group=true&group.query=downloads:[0%20TO%20100]&group.query=downloads:[100%20TO%20500]" ADD_DATE="1713768539">4 - group.query</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&group=true&group.query=downloads:[0%20TO%20100]&group.query=downloads:[100%20TO%20500]&group.sort=downloads%20asc" ADD_DATE="1713768539">5 - group.sort</A>
+                </DL><p>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Collapse &amp; Expand</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&fq={!collapse%20field=author_s}" ADD_DATE="1713768539">1 - collapse field</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%20%22Dickens,%20Charles%22&fq={!collapse%20field=author_s%20}" ADD_DATE="1713768539">2 - sort by score</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%20%22Dickens,%20Charles%22&fq={!collapse%20field=author_s%20%20min=downloads}" ADD_DATE="1713768539">3 - min</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%20%22Dickens,%20Charles%22&fq={!collapse%20field=author_s%20%20sort=%27title%20desc%27}" ADD_DATE="1713768539">4 - sort</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&fq={!collapse%20field=author_s}&expand=true" ADD_DATE="1713768539">1 - expand</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&fq={!collapse%20field=author_s}&expand=true&expand.field=downloads" ADD_DATE="1713768539">2 - expand.field</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&fq={!collapse%20field=author_s}&expand=true&expand.sort=downloads%20desc" ADD_DATE="1713768539">3 - expand.sort</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&fq={!collapse%20field=author_s}&expand=true&expand.sort=downloads%20desc&expand.rows=3" ADD_DATE="1713768539">4 - expand.rows</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&fq={!collapse%20field=author_s}&expand=true&expand.q=downloads:[1000%20TO%201500]" ADD_DATE="1713768539">5 - expand.q</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&fq={!collapse%20field=author_s}&fq=-languages:en&expand=true" ADD_DATE="1713768539">6 - expand with additional fq</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&fq={!collapse%20field=author_s}&fq=-languages:en&expand=true&expand.fq=downloads:[0%20TO%20500]" ADD_DATE="1713768539">7 - expand.fq</A>
+                </DL><p>
+            </DL><p>
+            <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">More Like This</H3>
+            <DL><p>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=id%3A345" ADD_DATE="1713768539">1 - Dracula</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q={!mlt%20qf=subjects%20mintf=1%20mindf=1}345&debug=query" ADD_DATE="1713768539">2 - mlt</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q={!mlt%20qf=subjects%20mintf=1%20mindf=1%20boost=true}345&debug=query" ADD_DATE="1713768539">3 - boost</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q={!mlt%20qf=subjects%20mintf=3%20mindf=1}345&debug=query" ADD_DATE="1713768539">4 - mintf=3</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q={!mlt%20qf=subjects%20mintf=1%20mindf=50}345&debug=query" ADD_DATE="1713768539">5 - mindf=50</A>
+            </DL><p>
+            <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Highlighting</H3>
+            <DL><p>
+                <DT><A HREF="http://localhost:8983/solr/books/select?hl.fl=title_en&hl.method=unified&hl=true&q=title_en%3A(adventure%20robin)" ADD_DATE="1713768539">1 - unified</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?hl.fl=title_en,subjects&hl.method=unified&hl=true&q=title_en%3A(adventure%20robin)" ADD_DATE="1713768539">2 - fl</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?hl.fl=title_en,subjects&hl.method=unified&hl=true&q=title_en%3A(adventure%20robin)&hl.requireFieldMatch=true" ADD_DATE="1713768539">3 - requireFieldMatch</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?hl.fl=title_en,subjects&hl.method=unified&hl=true&q=title_en%3A(adventure%20robin)&hl.q=title_en:Alice" ADD_DATE="1713768539">4 - hl.q</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?hl.fl=title_en&hl.method=unified&hl=true&q=title_en%3A(adventure%20robin)&hl.tag.pre=%3Cb%3E&hl.tag.post=%3C/b%3E" ADD_DATE="1713768539">5 - tag</A>
+            </DL><p>
+            <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Faceting</H3>
+            <DL><p>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=*%3A*&facet=true" ADD_DATE="1713768539">1 - Enable faceting</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.query=subjects_facet:%22Domestic%20fiction%22&rows=0&fl=subjects" ADD_DATE="1713768539">2 - facet.query different q</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=subjects:%22Domestic%20fiction%22&facet=true&facet.query=subjects_facet:%22Domestic%20fiction%22&rows=40&fl=subjects" ADD_DATE="1713768539">3 - facet.query same q</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.query=subjects_facet:%22Domestic%20fiction%22&facet.query=author_s:%22Austen,%20Jane%22&rows=0" ADD_DATE="1713768539">4 - multiple facet.query different q</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%22Austen,%20Jane%22&facet=true&facet.query=subjects_facet:%22Domestic%20fiction%22&facet.query=author_s:%22Austen,%20Jane%22&rows=0" ADD_DATE="1713768539">5 - multiple facet.query same q</A>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Field</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0" ADD_DATE="1713768539">1 - facet.field</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&facet.field=author_s&rows=0" ADD_DATE="1713768539">2 - multiple facet.field</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.prefix=Fa" ADD_DATE="1713768539">3 - facet.prefix</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.contains=Fiction" ADD_DATE="1713768539">4 - facet.contains</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.contains=fiction" ADD_DATE="1713768539">5 - facet.contains lowercase</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.contains=fiction&facet.contains.ignoreCase=true" ADD_DATE="1713768539">6 - facet.contains.ignoreCase</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.matches=.*gical.*" ADD_DATE="1713768539">7 - facet.matches</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.matches=.*gical.*&facet.sort=index" ADD_DATE="1713768539">8 - facet.sort</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.limit=5" ADD_DATE="1713768539">9 - facet.limit</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.offset=10" ADD_DATE="1713768539">10 - facet.offset</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.field=subjects_facet&rows=0&facet.mincount=20" ADD_DATE="1713768539">11 - facet.mincount</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=-subjects:*&facet=true&facet.field=subjects_facet&rows=0&facet.missing=true" ADD_DATE="1713768539">12 - facet.missing</A>
+                </DL><p>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Range</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=100&rows=0" ADD_DATE="1713768539">1 - facet.range</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=300&rows=0" ADD_DATE="1713768539">2 - facet.range.hardend false</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=downloads:[910%20TO%201210}&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=300&rows=0" ADD_DATE="1713768539">3 - facet.range.hardend query</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=downloads:[910%20TO%201000}&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=300&rows=0" ADD_DATE="1713768539">4 - facet.range.hardend within end</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=300&rows=0&facet.range.hardend=true" ADD_DATE="1713768539">5 - facet.range.hardend true</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=downloads:[310%20TO%20610}&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=300&rows=0" ADD_DATE="1713768539">6 - facet.range.include lower</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=downloads:[310%20TO%20610]&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=300&rows=0&facet.range.include=upper" ADD_DATE="1713768539">7 - facet.range.include upper</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=200&rows=0&facet.range.other=before" ADD_DATE="1713768539">8 - facet.range.other before</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=200&rows=0&facet.range.other=after" ADD_DATE="1713768539">9 - facet.range.other after</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.range=downloads&facet.range.start=10&facet.range.end=1000&facet.range.gap=200&rows=0&facet.range.other=between" ADD_DATE="1713768539">10 - facet.range.other between</A>
+                </DL><p>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Interval</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.interval=downloads&facet.interval.set=[100,1000)&rows=0" ADD_DATE="1713768539">1 - facet.interval</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.interval=downloads&facet.interval.set=[100,*)&rows=0" ADD_DATE="1713768539">2 - facet.interval.set *</A>
+                </DL><p>
+                <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Pivot</H3>
+                <DL><p>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.pivot=subjects_facet,author_s&rows=0" ADD_DATE="1713768539">1 - facet.pivot</A>
+                    <DT><A HREF="http://localhost:8983/solr/books/select?q=*:*&facet=true&facet.pivot=subjects_facet,author_s&rows=0&facet.pivot.mincount=5" ADD_DATE="1713768539">2 - facet.pivot.mincount 5 on both ext/int</A>
+                </DL><p>
+            </DL><p>
+            <DT><H3 ADD_DATE="1713768539" LAST_MODIFIED="1713768539">Function Queries</H3>
+            <DL><p>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q={!func}div(1,downloads)&debug=true" ADD_DATE="1713768539">1 - q</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%22Austen,%20Jane%22&sort={!func}div(1,downloads)%20desc" ADD_DATE="1713768539">2 - sort</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%22Austen,%20Jane%22&fl=downloads,{!func}div(1,downloads)" ADD_DATE="1713768539">3 - fl</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%22Austen,%20Jane%22&defType=edismax&debug=true" ADD_DATE="1713768539">4 - without</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%22Austen,%20Jane%22&defType=edismax&debug=true&bf={!func}div(1,downloads)" ADD_DATE="1713768539">5 - bf edismax</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?q=author_s:%22Austen,%20Jane%22&defType=edismax&debug=true&boost={!func}div(1,downloads)" ADD_DATE="1713768539">6 - boost</A>
+                <DT><A HREF="http://localhost:8983/solr/books/select?qf=title%20subjects&defType=edismax&q=english%20fiction&boost=query($favouriteAuthor,0.5)&boost=query($favouriteSubject,0.5)&favouriteAuthor=author_s:(charles%20dickens)&favouriteSubject=subjects:(ghost%20stories)&debug=true" ADD_DATE="1713768539">7 - external params</A>
+            </DL><p>
+        </DL><p>
+    </DL><p>
+</DL><p>
